@@ -1,0 +1,44 @@
+device: cuda
+seed: 42
+num_workers: 4
+pin_memory: True
+
+# 图像预处理
+image_size: 224
+mean: [0.485, 0.456, 0.406]
+std: [0.229, 0.224, 0.225]
+
+# 特征提取
+clip_model: ViT-L/14
+dinov2_model: dinov2_vitl14
+fusion_weight: 0.5
+similarity_threshold: 0.7
+feat_dim: 768  # CLIP ViT-L/14 特征维度
+
+# SAM 掩码生成
+sam_checkpoint: "checkpoints/hq_sam_vitl.pth"
+model_type: vit_l
+nms_threshold: 0.5
+mask_conf_threshold: 0.5
+mask_area_min: 100
+mask_area_max_ratio: 0.3
+
+# 检索与推理
+topk: 5
+env_filter_threshold: 0.6
+kg_path: "data/WildPlantKG_full.json"
+conflict_threshold: 0.3
+
+# 训练参数
+batch_size: 16
+lr: 1e-5
+epochs: 20
+temperature: 0.1
+contrastive_loss_weight: 0.5
+warmup_epochs: 2
+weight_decay: 1e-6
+
+# 数据集
+dataset_root: "data/WildPlantOpenSet-10K"
+num_known_species: 612
+num_unknown_species: 527
