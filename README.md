@@ -29,7 +29,7 @@ Perception → Retrieval → Reasoning → Decision → Iteration.
 - Scenes: forests, shrubs, grasslands, wetlands, alpine meadows, occlusions, uneven lighting, multi-species coexistence
 
 **Dataset Download Link:**
-https://pan.quark.cn/s/e937a5798aba
+doi:10.5281/zenodo.20183969
 
  5. Pretrained Model
 HQ-SAM checkpoint is required for mask generation.
