@@ -24,7 +24,7 @@ Perception → Retrieval → Reasoning → Decision → Iteration.
  4. Dataset: WildPlantOpenSet-10K
 - Total images: 10,240
 - Known species: 612
-- Unknown species: 527
+- Unknown species: 52
 - Annotations: instance masks, species labels, family/genus taxonomy, habitat information
 - Scenes: forests, shrubs, grasslands, wetlands, alpine meadows, occlusions, uneven lighting, multi-species coexistence
 
